@@ -580,6 +580,7 @@ p.edge{
       }
       &:last-child{
         border-right:none;
+        border-bottom:none;
       } 
           }
   }  
@@ -618,11 +619,11 @@ p.edge{
 .contact-detail p{
   color:#ffffff;
 }
-.contact{
-  height:80vh;
+// .contact{
+//   height:80vh;
 
-  // background:url(contact.jpg) !important;
-}
+//   // background:url(contact.jpg) !important;
+// }
 #contact-main{
   position:relative
 }
@@ -640,7 +641,7 @@ p.edge{
   left:0;
   top:0;
   height:100vh;
-  width:100vw;
+  width:100%
 
 }
 

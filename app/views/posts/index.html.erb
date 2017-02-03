@@ -235,38 +235,35 @@ $(document).ready(function(){
   <div class="container animatedParent animateOnce">
  
     <div class="row">
- <h3 class="contact-detail-title">Contact Info</h3>
-    <div class="col-md-5">      
-              <div class="contact-detail center">
-                <label></label>
-                        <p>
-                        Suryabinayak 08, Bhaktapur <br/>
-                        Bagmati, Nepal <br/>
-                        PO Box : 65 <br/>
-                        Phone/Fax :  <a href="tel:977-01-6617648 ">+977-01-6617648</a> <br>
-                        Email :  <a href="mailto:info@nbinfotech.com.np">info@nbinfotech.com.np</a>
-                        </p>        
-
-                    </div>
-     </div>
-     <div class="col-md-1"></div>
-    
-      <div class="col-md-6">
+      <h3 class="contact-detail-title">Contact Info</h3>
+        <div class="col-md-5">      
+          <div class="contact-detail center">
+            <p>
+              Suryabinayak 08, Bhaktapur <br/>
+              Bagmati, Nepal <br/>
+              PO Box : 12 <br/>
+              Phone/Fax :  <a href="tel:977-01-6613372 ">+977-01-6613372</a> <br>
+              Email :  <a href="mailto:subashsly33@gmail.com">subashsly33@gmail</a>
+            </p>    
+          </div>
+        </div>
+        <div class="col-md-1"></div>
+        
+        <div class="col-md-6">
         <!-- /.contact-info -->
         <div class="contact-form animated bounceInLeft slow" data-id="2">
-          <form id="contact" name="contact" method="post" action="contact" enctype="multipart/form-data">
+          
+        <%= form_for :post, multipart: true do |f| %>
             <div class="row">
               <div class="col-md-6 col-sm-6">
                 <div class="form-group">
-                  <label for="name" id="namelabel"><span class="err"><i class="fa fa-info-circle"></i> Please enter your name</span></label>
-                  <input id="name" name="name" type="text" class="form-control" placeholder="Your Name *">
+                <%= f.text_field :name, class: "form-control", placeholder:"Your Name *" %>
                   <span class="anim"></span>
                 </div>
               </div>
               <div class="col-md-6 col-sm-6">
                 <div class="form-group">
-                  <label for="email" id="emailabel"><span class="err"><i class="fa fa-info-circle"></i> Please enter a valid e-mail address</span></label>
-                  <input id="email" name="email" type="email" class="form-control" placeholder="Your Email *">
+                <%= f.text_area :email, class:"form-control", placeholder:"Your Email *" %>
                   <span class="anim"></span>
                 </div>
               </div>
@@ -274,26 +271,24 @@ $(document).ready(function(){
             <div class="row">
               <div class="col-md-12">
                 <div class="form-group">
-                  <label for="message" id="msglabel"><span class="err"><i class="fa fa-info-circle"></i> Share your words with us</span></label>
-                  <textarea id="message" name="message" class="form-control" placeholder="Drop Some Words *" rows="5"></textarea>
+                <%= f.text_area :message, class:"form-control", placeholder:"Drop Some Words *", rows:"5"%>
                   <span class="anim"></span>
                 </div>
               </div>
             </div>
            
-  
             <div class="form-group">
               <section id="subber">
-                <button type="submit" name="submitlink" id="submitlink" class="btn btn-lg btn-block btn-flat btn-danger">Send <i class="fa fa-paper-plane"></i></button>
+              <%= f.submit "Send", class:"btn btn-lg btn-block btn-flat btn-danger" %>
               </section>
             </div>
-          </form>
+          <% end %>
 
-        </div>
+        </div><!-- bounce end -->
         <!-- /.contact-form -->
       </div>
 
-    </div>
+    </div><!-- row end-->
   </div>
 </section>
 <div class="copyright">
