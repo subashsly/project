@@ -32,10 +32,10 @@ Rails.application.configure do
 # SMTP settings for gmail
 config.action_mailer.smtp_settings = {
  :address              => "smtp.gmail.com",
- :domain               => "subashshahi.com.np",
+ # :domain               => "subashshahi.com.np",
  :port                 => 587,
- :user_name            => "subashsly33@gmail.com",
- :password             => "subash*#980",
+ :user_name            => "subashsly44@gmail.com",
+ :password             => "subashslyy",
  :authentication       => "plain",
 :enable_starttls_auto => true
 # :openssl_verify_mode  => 'none'

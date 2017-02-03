@@ -1,11 +1,11 @@
 class PostsController < ApplicationController
  
 	def create
-		if  UserMailer.welcome_email.deliver_later
-			render plain: params[:post].inspect
-		else
-		 	render plain: "Hait"
-		 end
+		 UserMailer.welcome_email.deliver_later
+			render plain: ENV['GMAIL_USERNAME']
+			
+		
+		 
 	end
 
 

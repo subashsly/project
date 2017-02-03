@@ -48,16 +48,18 @@ Rails.application.configure do
 # SMTP settings for gmail
 config.action_mailer.smtp_settings = {
  :address              => "smtp.gmail.com",
- :domain               => "heroku.com",
+ # :domain               => "subashshahi.com.np",
  :port                 => 587,
- :user_name            => ENV['SENDGRID_USERNAME'],
- :password             => ENV['SENDGRID_PASSWORD'],
+ :user_name            => ENV["GMAIL_USERNAME"],
+ :password             => ENV["GMAIL_PASSWORD"],
  :authentication       => "plain",
 :enable_starttls_auto => true
+# :openssl_verify_mode  => 'none'
 }
 
 config.action_mailer.default_url_options = { :host => 'projectnb.herokuapp.com' }
-
+config.action_mailer.perform_deliveries = true
+  config.action_mailer.perform_caching = false
 
 
 
