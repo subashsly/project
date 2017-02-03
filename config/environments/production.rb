@@ -48,7 +48,7 @@ Rails.application.configure do
 # SMTP settings for gmail
 config.action_mailer.smtp_settings = {
  :address              => "smtp.gmail.com",
- :domain               => "example.com",
+ :domain               => "gmail.com",
  :port                 => 587,
  :user_name            => ENV["GMAIL_USERNAME"],
  :password             => ENV["GMAIL_PASSWORD"],
@@ -56,6 +56,7 @@ config.action_mailer.smtp_settings = {
 :enable_starttls_auto => true
 }
 
+config.action_mailer.default_url_options = { :host => 'https://projectnb.herokuapp.com' }
 
 
 
