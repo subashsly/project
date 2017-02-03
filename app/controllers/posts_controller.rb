@@ -1,11 +1,13 @@
 class PostsController < ApplicationController
  
 	def create
-		 UserMailer.welcome_email.deliver_later
-			redirect_to root_path
-
-		
-		 
+		respond_to do |format|
+	      	if UserMailer.welcome_email.deliver_later
+	        	format.js
+	      	else
+	        	format js
+	     	 end
+		end
 	end
 
 
