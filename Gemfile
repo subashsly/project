@@ -37,6 +37,7 @@ gem 'angularjs-rails', '~> 1.2.25'
 gem 'autoprefixer-rails'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+gem 'rake', '< 11.0'
 
 
 group :production do
