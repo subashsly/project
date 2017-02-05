@@ -264,7 +264,7 @@ $(document).ready(function(){
               </div>
               <div class="col-md-6 col-sm-6">
                 <div class="form-group">
-                <%= f.text_field :email, type: "email", data: { 'ng-model' => 'user.email' }, class: "form-control", placeholder:"Your Email *" %>
+                <%= f.text_field :email, type: "email", data: { 'ng-model' => 'user.email' }, class: "form-control", placeholder:"Your Email *", :required => true %>
                   <span class="anim"></span>
                 </div>
               </div>
