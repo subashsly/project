@@ -2,20 +2,7 @@
 <html>
   <head>
   <script type="text/javascript">
-  	 angular.module('formExample', [])
-    .controller('ExampleController', ['$scope', function($scope) {
-      $scope.master = {};
-
-      $scope.update = function(user) {
-        $scope.master = angular.copy(user);
-      };
-
-      $scope.reset = function() {
-        $scope.user = angular.copy($scope.master);
-      };
-
-      $scope.reset();
-    }]);
+  	
   </script>
  <script src="//code.angularjs.org/snapshot/angular.min.js"></script>
 
@@ -27,7 +14,7 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body >
+  <body ng-app="formExample">
   
     <%= yield %>
   </body>
