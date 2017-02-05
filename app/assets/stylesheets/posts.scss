@@ -611,11 +611,24 @@ p.edge{
 .contact .contact-form .form-group label { display: block; font-weight: normal; }
 .contact .contact-form .form-group .err { color: #ffffff; background: #ef3f3d; display: none; font-size: 13px; position: absolute; right: 0; top: 12px; padding: 4px 7px; font-weight: normal; }
 
+input, textarea {
+  color:#ffffff !important;
+}
 
+ input.ng-invalid.ng-touched {
+    background-color: Pink !important;
+    color:red !important;
+  }
+
+  // input.ng-valid.ng-touched {
+  //   background-color: #78FA89;
+  //   color:green !important;
+  // }
 /* contact end */
 .contact-info .icon-effect-1 .hi-icon::after { background-color: #ef3f3d; }
 
-.contact-detail label{display:block}.contact-detail{text-align:right}.contact-detail a{color:#ffffff}h3.contact-detail-title{margin-top:5%;margin-bottom:5%;text-align:center;color:#ffffff;}
+.contact-detail label{display:block}
+.contact-detail a{color:#ffffff}h3.contact-detail-title{margin-top:5%;margin-bottom:5%;color:#ffffff;}
 .contact-detail p{
   color:#ffffff;
 }

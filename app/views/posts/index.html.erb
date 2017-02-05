@@ -232,13 +232,13 @@ $(document).ready(function(){
 <div id="contact-main">
 <img src="assets/contact.jpg" style="width: 100vw; height: 100vh">
 <div class="contact-black"></div>
-<section class="contact section center">
+<section class="contact section">
   <div class="container animatedParent animateOnce">
  
     <div class="row">
       <h3 class="contact-detail-title">Contact Info</h3>
         <div class="col-md-5">      
-          <div class="contact-detail center">
+          <div class="contact-detail">
             <p>
               Suryabinayak 08, Bhaktapur <br/>
               Bagmati, Nepal <br/>
@@ -252,38 +252,46 @@ $(document).ready(function(){
         
         <div class="col-md-6">
         <!-- /.contact-info -->
-        <div class="contact-form animated bounceInLeft slow" data-id="2">
+        <div class="contact-form animated bounceInLeft slow" data-id="2" ng-controller="ExampleController">
           
-        <%= form_for :post, multipart: true do |f| %>
+        <%= form_for :post, multipart: true, remote: true do |f| %>
             <div class="row">
               <div class="col-md-6 col-sm-6">
                 <div class="form-group">
-                <%= f.text_field :name, class: "form-control", placeholder:"Your Name *" %>
+                <%= f.text_field :name, data: { 'ng-model' => 'user.name' },  class: "form-control", placeholder:"Your Name *", :required => true %>
                   <span class="anim"></span>
                 </div>
               </div>
               <div class="col-md-6 col-sm-6">
                 <div class="form-group">
-                <%= f.text_area :email, class:"form-control", placeholder:"Your Email *" %>
+                <%= f.text_field :email, type: "email", data: { 'ng-model' => 'user.email' }, class: "form-control", placeholder:"Your Email *" %>
                   <span class="anim"></span>
                 </div>
               </div>
             </div>
+
             <div class="row">
               <div class="col-md-12">
                 <div class="form-group">
+
                 <%= f.text_area :message, class:"form-control", placeholder:"Drop Some Words *", rows:"5"%>
                   <span class="anim"></span>
                 </div>
               </div>
             </div>
-           
+           <input type="button" ng-click="reset()" value="Reset" />
             <div class="form-group">
               <section id="subber">
-              <%= f.submit "Send", class:"btn btn-lg btn-block btn-flat btn-danger" %>
+             
+              <%= f.submit "Send", data: { 'ng-click' => 'update(user)' }, class:"btn btn-lg btn-block btn-flat btn-danger" %>
               </section>
+
+
+              
+    <!-- <input type="submit" ng-click="update(user)" value="Save" /> -->
             </div>
           <% end %>
+
 
         </div><!-- bounce end -->
         <!-- /.contact-form -->
@@ -301,9 +309,7 @@ $(document).ready(function(){
 
 
 
-  
-
-
+<div >
 
 
 

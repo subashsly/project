@@ -13,9 +13,29 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require angular
+//= require angular-resource
 //= require bootstrap-sprockets
 //= require_tree .
 //= require_self
+
+  angular.module('formExample', [])
+    .controller('ExampleController', ['$scope', function($scope) {
+      $scope.master = {};
+
+      $scope.update = function(user) {
+        $scope.master = angular.copy(user);
+      };
+
+      $scope.reset = function() {
+        $scope.user = angular.copy($scope.master);
+      };
+
+      $scope.reset();
+    }]);
+
+
+
 $(document).ready(function(){
 
   $("a.page-scroll").click(function(){
