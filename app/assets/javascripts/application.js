@@ -13,24 +13,23 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-
 //= require bootstrap-sprockets
 //= require_tree .
 //= require_self
-
-
-
-
 $(document).ready(function(){
 
-  $("a.page-scroll").click(function(){
+  $("li a.page-scroll").click(function(){
+        
           $('#toggle').toggleClass('active');
           $('#overlay').toggleClass('open');
+          
+    document.getElementById("myNav").style.width = "0%";
 
   
     });
 
 $('#toggle').click(function() {
+  $(this).css('background-color', 'red');
    $(this).toggleClass('active');
    $('#overlay').toggleClass('open');
   });
@@ -62,19 +61,4 @@ $('.carousel').carousel({
   pause: "false"
 });
 });
-
- angular.module('formExample', [])
-    .controller('ExampleController', ['$scope', function($scope) {
-      $scope.master = {};
-
-      $scope.update = function(user) {
-        $scope.master = angular.copy(user);
-      };
-
-      $scope.reset = function() {
-        $scope.user = angular.copy($scope.master);
-      };
-
-      $scope.reset();
-    }]);
 

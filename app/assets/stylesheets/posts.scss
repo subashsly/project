@@ -11,28 +11,60 @@ $color-link: #FFF;
 
 $button-height: 27px;
 $button-width: 35px;
+hr{
+      content: "" !important;
+    background: black !important;
+    height: 1px !important;
+    width: 65px !important;
+    position: absolute !important;
+    bottom: 15px !important;
+    left: 0px !important;
+    right: 0px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+* {
+  padding: 0;
+  margin: 0
+}
+
+.scrollTop {position: fixed; bottom: 20px; right: 20px; display: none;}
+
+
+.clear{
+  clear: both;
+}
+
+.main-carousel{
+  position: relative;
+}
+.carousel-black{
+  position: absolute;
+  background: black;
+  top: 0px;
+  left: 0px;
+  height: 100vh;
+  z-index: 2;
+  width: 100%;
+  opacity: 0.6;
+}
+
+body {
+  background-color: white;
+}
+a{
+  text-decoration: none;
+}
+ul li{
+  list-style: none;
+}
 
 body {
   background: $color-background;
-  height:auto;
+  font-family: 'Avenir', Yantramanav !important;
 }
 
-ul li{
-  list-style:none;
-}
-
-
-/*  position: absolute;
-  width: 100%;
-  heigh: 100%;
-  text-align: center;
-  top: 40%;
-  left: 0;
-  margin:  0 auto;
-  font-family: 'Roboto', sans-serif;
-  */
-
-.container{
+.container {
   p {
     font-size: 20px;
   }
@@ -62,17 +94,17 @@ ul li{
       width: 100%;
     }
   }
-
+}
 
 h1 {
   position: relative;
   text-align: center;
   font-family: 'Vollkorn', sans-serif;
 }
-}
+
 .button_container {
   position: fixed;
-  top: 5%;
+  top: 1.2% !important;
   right: 2%;
   height: $button-height;
   width: $button-width;
@@ -253,12 +285,15 @@ h1 {
 
  .carousel {
   position: relative;
+  background-color: black;
+  opacity: 0.8; 
 }
 
 .carousel-inner {
   position: relative;
   width: 100%;
   overflow: hidden;
+
 }
 
 .carousel-inner > .item {
@@ -350,6 +385,7 @@ h1 {
 
 .carousel-control:hover,
 .carousel-control:focus {
+  background: rgba(204, 204, 204, 0.2);
   color: #ffffff;
   text-decoration: none;
   opacity: 0.9;
@@ -398,8 +434,8 @@ h1 {
 
 .carousel-indicators li {
   display: inline-block;
-  width: 10px;
-  height: 10px;
+  width: 13px !important;
+  height: 13px !important;
   margin: 1px;
   text-indent: -999px;
   cursor: pointer;
@@ -408,20 +444,21 @@ h1 {
 }
 
 .carousel-indicators .active {
-  width: 12px;
-  height: 12px;
+  width: 14px !important;
+  height: 14px !important;
   margin: 0;
-  background-color: #ffffff;
+  background-color: white !important;
+  opacity: 0.35
 }
 
 .carousel-caption {
-  position: absolute;
-  right: 15%;
+  right: 0% !important;
   bottom: 20px;
-  left: 15%;
-  z-index: 10;
+  left: 0% !important;
+  font-size: 60px;
+  z-index: 100 !important;
   padding-top: 20px;
-  padding-bottom: 20px;
+  padding-bottom: 0px;
   color: #ffffff;
   text-align: center;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
@@ -430,6 +467,12 @@ h1 {
 .carousel-caption .btn {
   text-shadow: none;
 }
+
+/*@media screen and (min-width: 768px) {
+  .carousel-caption {
+    top: 00px !important;
+  }
+}*/
 
 @media screen and (min-width: 768px) {
   .carousel-control .icon-prev,
@@ -441,9 +484,10 @@ h1 {
     font-size: 30px;
   }
   .carousel-caption {
-    right: 20%;
-    left: 20%;
-    padding-bottom: 30px;
+    right: 0% !important;
+    left: 0% !important;
+    top: 250px !important;
+    padding-bottom: 0px;
   }
   .carousel-indicators {
     bottom: 20px;
@@ -472,29 +516,28 @@ h1 {
 }
 .carousel-3 {
   height: 100%;
-  background: url(cover3.jpg)  no-repeat center center ;
+  background: url(cover5.jpg)  no-repeat center center ;
   -webkit-background-size: cover;
   background-size: cover;
 }
 .carousel-4 {
   height: 100%;
-  background: url(cover4.jpg)  no-repeat center center ;
+  background: url(cover3.jpg)  no-repeat center center ;
   -webkit-background-size: cover;
   background-size: cover;
 }
 .carousel-5 {
   height: 100%;
-  background: url(cover5.jpg)  no-repeat center center ;
+  background: url(cover4.jpg)  no-repeat center center ;
   -webkit-background-size: cover;
   background-size: cover;
 }
 /************ about us start**************/
 
-#about-us {padding: 90px 0; background: url(aboutus.jpg) no-repeat bottom right; }
-#about-us .heading{}
-#about-us .heading h2 { font-size: 40px; padding: 0px 0 0; line-height: 60px; margin: 0 0 40px; font-weight: 700; text-transform:uppercase; color: red; }
+#about-us {padding: 70px 0; background: url(aboutus.jpg) no-repeat bottom right; }
+#about-us .heading h2 { font-size: 40px; padding: 0px 0 0; line-height: 60px; margin: 0 0 40px; font-weight: 700; text-transform:uppercase; color: #bd253c; }
 #about-us .about_content{ font-size: 20px !important; line-height: 30px; color:#000; }
-#about-us .about_content h3 { margin: 0 0 25px; font-size: 26px; line-height: 34px; }
+#about-us .about_content h3 { margin: 0 0 5px; font-size: 26px; line-height: 34px; }
 #about-us .about_content p{ margin: 0px;}
 
 .middle-banner{
@@ -532,10 +575,10 @@ p.edge{
 }/*************about us end****************/
 
 /************ services start**************/
-#services {padding: 48px 0;}
+#services {padding: 70px 0;}
 #services .col-sm-3 .service1{ border: 2px solid #666666; width:50px;height:50px; border-radius: 5px; border-size:0px;}
 /*#services {height: 100%; background: url(ep6.jpg) no-repeat top left ;}
-*/#services .heading h2{ color: red; font-size: 40px; line-height: 60px; margin: 0 0 30px; font-weight: 700; text-transform: uppercase; color: red;}
+*/#services .heading h2{color: #bd253c; font-size: 40px; line-height: 60px; margin: 0 0 30px; font-weight: 700; text-transform: uppercase; color: #bd253c;}
 #services .container .row .col-sm-3 .service p{font-size: 16px !important; line-height: 1.8; color:#000; padding: 0 5%;}
 .service-effect{
     padding: 10px 0px; 
@@ -543,6 +586,7 @@ p.edge{
   &:hover{
     box-shadow: 0px 0px 20px rgba(166,166,166,0.5);
     -moz-box-shadow: 0px 0px 20px rgba(166,166,166,0.5) ;
+    background: rgba(204, 204, 204, 0.2);
   -webkit-transform: scale(1.1);
   -moz-transform: scale(1.1);
 }
@@ -550,6 +594,9 @@ p.edge{
 /************ services end**************/
 
 /*************technologies start*****************/
+.tools-title h2 { font-size: 40px; padding: 0px 0 0; line-height: 60px; margin: 0 0 40px; font-weight: 700; text-transform:uppercase; color: #bd253c; }
+
+#technology {padding: 70px 0px 30px;}
 .technologies{
   ul{
     padding: 0 !important;
@@ -581,23 +628,18 @@ p.edge{
       }
       &:last-child{
         border-right:none;
-        border-bottom:none;
       } 
           }
   }  
 }
+.bottom-ul li {
+  border-bottom: none !important;
+}
 /*************technologies end*****************/
 
-/* contact start */
-// .contact.hasbg { background-image: url(../images/contact-bg.jpg); }
-// .contact-info { margin-bottom: 50px; }
-// .contact-info .info-block .hi-icon { border: 2px solid #ef3f3d; color: #ef3f3d; font-size: 28px; height: 56px; line-height: 52px; margin-bottom: 15px; width: 56px; }
-// .contact-info .info-block .hi-icon:hover { color: #ffffff; }
-// .contact-info .info-block p { line-height: 24px; }
-// .contact-form { text-align: left; }
-// .contact-form .form-msg { font-size: 14px; margin-bottom: 30px; opacity: 0.5; }
+.contact .contact-form{float: left !important;}
 .contact .contact-form .form-group { margin-bottom: 30px; position: relative; }
-.contact .contact-form .form-control { background-color: transparent; border: 0; border-bottom: 2px solid #ffffff; border-radius: 0; box-shadow: none; color: #333333; height: 48px; line-height: 1.42857; padding: 6px 0; position: relative; transition: none; }
+.contact .contact-form .form-control { background-color: transparent; border: 0; border-bottom: 2px solid #ffffff; border-radius: 0; box-shadow: none; color: #ffffff; height: 48px; line-height: 1.42857; padding: 6px 0; position: relative; transition: none; }
 .contact.hasbg .contact-form .form-control { border-bottom: 1px solid #ffffff; color: #ffffff; }
 .contact .contact-form .anim { background-color: #ef3f3d; bottom: 0; content: ''; height: 3px; left: 0; position: absolute; transform: scale(0); transition: all 1s ease; width: 100%; }
 .contact .contact-form .form-control:focus + .anim { transform: scale(1); }
@@ -606,38 +648,26 @@ p.edge{
 .contact .contact-form .form-control::-webkit-input-placeholder { text-transform: uppercase; color:#ffffff; }
 .contact .contact-form .form-control::-moz-placeholder { text-transform: uppercase; color:#ffffff; }
 .contact .contact-form .form-control:-ms-input-placeholder { text-transform: uppercase; color:#ffffff; }
-// .contact .contact-form .form-control.captcha .captchaimg {  }
-
+/*// .contact .contact-form .form-control.captcha .captchaimg {  }
+*/
 .contact .successmsg { background-color: #ffffff; color: #ffffff; font-size: 16px; margin-top: 30px; padding: 10px 30px; text-align: center; }
 .contact .contact-form .form-group label { display: block; font-weight: normal; }
 .contact .contact-form .form-group .err { color: #ffffff; background: #ef3f3d; display: none; font-size: 13px; position: absolute; right: 0; top: 12px; padding: 4px 7px; font-weight: normal; }
 
-input, textarea {
-  color:#ffffff !important;
-}
 
- input.ng-invalid.ng-touched {
-    background-color: Pink !important;
-    color:red !important;
-  }
-
-  // input.ng-valid.ng-touched {
-  //   background-color: #78FA89;
-  //   color:green !important;
-  // }
 /* contact end */
 .contact-info .icon-effect-1 .hi-icon::after { background-color: #ef3f3d; }
 
-.contact-detail label{display:block}
-.contact-detail a{color:#ffffff}h3.contact-detail-title{margin-top:5%;margin-bottom:5%;color:#ffffff;}
+.contact-detail label{display:block}.contact-detail{text-align:right}.contact-detail a{color:#ffffff}
+h3.contact-detail-title{margin-top:5%;margin-bottom:5%;
+  text-align:center;
+  color: #bd253c;
+    font-size: 40px;
+    font-weight: 700;
+    text-transform: uppercase;}
 .contact-detail p{
   color:#ffffff;
 }
-// .contact{
-//   height:80vh;
-
-//   // background:url(contact.jpg) !important;
-// }
 #contact-main{
   position:relative
 }
@@ -655,7 +685,7 @@ input, textarea {
   left:0;
   top:0;
   height:100vh;
-  width:100%
+  width:100%;
 
 }
 
@@ -672,4 +702,131 @@ input, textarea {
   color: #fafafa;
 }
 
+/*service banner start*/
 
+.service-banner{
+  height: 230px;
+  width: 100%;
+  background: url(blue2.jpg) no-repeat;
+  background-attachment: fixed;
+  margin-top: 0px;
+}
+.macbook-img{
+  float: right;
+  position: relative;
+  bottom: 0px;
+}
+.service-banner-text p{
+  font-size: 28px;
+  
+  /*position: relative;*/
+  font-family: cursive;
+   color: white;
+   margin-top: 30px;
+  /*left: 50px;<
+  top: 50px;*/
+}
+p.edge{
+  text-transform: uppercase;
+  font-size: 36px;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+@media screen and (max-width: 568px) {
+    p.edge {
+        font-size:1.2em;
+    }
+}
+/*service banner end*/
+.mainmenu{
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  height: 45px;
+  border-bottom: 1px solid gray;
+  background: white;
+  z-index: 80;
+}
+.logo{
+  font-size: 20px;
+  float: left;
+  text-align: center;
+  color: black;
+  padding-left: 5%;
+  margin-top: 8px;
+  color: black !important;
+}
+.logo a{
+  color: black;
+}
+.contactmenu{
+  float: right;
+  padding-right: 100px;
+  padding-top: 16px;
+}
+.contactmenu ul li{
+  float: left;margin-left: 20px;
+}
+.contactmenu ul li a{
+
+  color: black;
+}
+@media screen and (width: 360px) {
+  .mainmenu {
+    height: 90px;
+  }
+}
+
+/********************modling overlay about the company**************************/
+#modalimg {
+/*  background-image: url(/assets/cover2.jpg);
+*/}
+.overlaay {
+    height: 100vh;
+    width: 0;
+    position: fixed;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.overlay-content {
+    position: relative;
+    top: 5%;
+    width: 100%;
+    text-align: center;
+    margin-top: 60px;
+}
+.overlay-content .container p {color: white !important;} 
+.overlaay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlaay a:hover, .overlaay a:focus {
+    color: red;
+}
+
+.overlaay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlaay a {font-size: 20px}
+  .overlaay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+/******************** end of modling overlay about the company**************************/
