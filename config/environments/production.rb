@@ -53,7 +53,7 @@ config.assets.digest = true
 # SMTP settings for gmail
 config.action_mailer.smtp_settings = {
  :address              => "smtp.gmail.com",
- # :domain               => "subashshahi.com.np",
+ domain: 'heroku.com',
  :port                 => 587,
  :user_name            => ENV["GMAIL_USERNAME"],
  :password             => ENV["GMAIL_PASSWORD"],
