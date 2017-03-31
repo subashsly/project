@@ -48,12 +48,13 @@ config.assets.digest = true
   # config.force_ssl = true
 
     # Don't care if the mailer can't send.
-  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.raise_delivery_errors = false
   config.action_mailer.delivery_method = :smtp
+  config.action_mailer.default :charset => "utf-8"
 # SMTP settings for gmail
 config.action_mailer.smtp_settings = {
  :address              => "smtp.gmail.com",
- domain: 'heroku.com',
+ :domain               => "projectnb.herokuapp.com",
  :port                 => 587,
  :user_name            => ENV["GMAIL_USERNAME"],
  :password             => ENV["GMAIL_PASSWORD"],
