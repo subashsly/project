@@ -780,9 +780,9 @@ p.edge{
 
 
 
-@media screen and (max-device-width: 480px) { 
-  .mainmenu {
-    height: 120px;
+@media all and (max-width: 500px) {
+  body {
+    background: #ccc !important;
   }
 }
 /********************modling overlay about the company**************************/
