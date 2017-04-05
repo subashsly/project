@@ -6,7 +6,7 @@
 
 $color-background: #F5F5F5;
 $color-main: #FF5252;
-$color-active: #FFF;
+$color-active: #FF5252;
 $color-link: #FFF;
 
 $button-height: 27px;
@@ -28,7 +28,7 @@ hr{
   margin: 0
 }
 
-.scrollTop {position: fixed; bottom: 20px; right: 20px; display: none;}
+.scrollTop {position: fixed; bottom: 8%; right: 6%; display: none; z-index:100;}
 
 
 .clear{
@@ -536,7 +536,7 @@ h1 {
 /************ about us start**************/
 
 #about-us {padding: 70px 0; background: url(aboutus.jpg) no-repeat bottom right; }
-#about-us .heading h2 { font-size: 40px; padding: 0px 0 0; line-height: 60px; margin: 0 0 40px; font-weight: 700; text-transform:uppercase; color: #bd253c; }
+#about-us .heading h2 { font-size: 40px; padding: 0px 0 0; line-height: 60px; margin: 0 0 40px; font-weight: 700; text-transform:uppercase; color: #FF5252; }
 #about-us .about_content{ font-size: 20px !important; line-height: 30px; color:#000; }
 #about-us .about_content h3 { margin: 0 0 5px; font-size: 26px; line-height: 34px; }
 #about-us .about_content p{ margin: 0px;}
@@ -576,10 +576,10 @@ p.edge{
 }/*************about us end****************/
 
 /************ services start**************/
-#services {padding: 70px 0;}
+#services {margin: 5% 0% 5% 0% ;}
 #services .col-sm-3 .service1{ border: 2px solid #666666; width:50px;height:50px; border-radius: 5px; border-size:0px;}
 /*#services {height: 100%; background: url(ep6.jpg) no-repeat top left ;}
-*/#services .heading h2{color: #bd253c; font-size: 40px; line-height: 60px; margin: 0 0 30px; font-weight: 700; text-transform: uppercase; color: #bd253c;}
+*/#services .heading h2{color: #FF5252; font-size: 40px;  margin: 0 0 20px 0; font-weight: 700; text-transform: uppercase;}
 #services .container .row .col-sm-3 .service p{font-size: 16px !important; line-height: 1.8; color:#000; padding: 0 5%;}
 .service-effect{
     padding: 10px 0px; 
@@ -595,9 +595,9 @@ p.edge{
 /************ services end**************/
 
 /*************technologies start*****************/
-.tools-title h2 { font-size: 40px; padding: 0px 0 0; line-height: 60px; margin: 0 0 40px; font-weight: 700; text-transform:uppercase; color: #bd253c; }
+.tools-title h2 { font-size: 40px; line-height: 50px; margin: 0 0 40px 0; font-weight: 700; text-transform:uppercase; color: #FF5252; }
 
-#technology {padding: 70px 0px 30px;}
+#technology {padding: 5% 0% 5% 0%;}
 .technologies{
   ul{
     padding: 0 !important;
@@ -772,11 +772,7 @@ p.edge{
 
   color: black;
 }
-@media screen and (max-width: 480px) {
-  .mainmenu {
-    height: 80px;
-  }
-}
+
 
 
 

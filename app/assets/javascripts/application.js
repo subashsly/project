@@ -29,7 +29,7 @@ $(document).ready(function(){
     });
 
 $('#toggle').click(function() {
-  $(this).css('background-color', 'red');
+  
    $(this).toggleClass('active');
    $('#overlay').toggleClass('open');
   });
