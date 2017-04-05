@@ -121,16 +121,16 @@ h1 {
   &.active {
     .top {
       transform: translateY(10px) translateX(0) rotate(45deg);
-      background: $color-active;
+      // background: $color-active;
     }
     .middle {
       opacity: 0;
-      background: $color-active;
+      // background: $color-active;
     }
     
     .bottom {
       transform: translateY(-10px) translateX(0) rotate(-45deg);
-      background: $color-active;
+      // background: $color-active;
     }
   }
   
