@@ -778,6 +778,13 @@ p.edge{
   }
 }
 
+
+
+@media screen and (max-device-width: 430px) { 
+  .mainmenu {
+    height: 120px;
+  }
+}
 /********************modling overlay about the company**************************/
 #modalimg {
 /*  background-image: url(/assets/cover2.jpg);
